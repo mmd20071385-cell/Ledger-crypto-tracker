@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-paper font-body antialiased;
+    background-image: radial-gradient(circle at 1px 1px, rgba(237,234,226,0.035) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  ::selection {
+    @apply bg-brass/30 text-paper;
+  }
+
+  * {
+    @apply border-ink-line;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0E1116;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A3140;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3A4358;
+  }
+
+  :focus-visible {
+    outline: 2px solid #D4A24E;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* A hairline "ledger rule" used under headers / row groups */
+  .rule {
+    @apply border-b border-ink-line;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .eyebrow {
+    @apply font-body text-[11px] font-medium tracking-wide text-paper-faint;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
