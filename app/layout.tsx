@@ -27,7 +27,7 @@ const body = Vazirmatn({
 // });
 
 export const metadata: Metadata = {
-  title: "دفتر — ردیاب زنده دارایی‌های دیجیتال",
+  title: "قیمت زنده ارز دیجیتال",
   description:
     "دفتر بازار برای دارایی‌های دیجیتال: قیمت زنده، جستجو، فیلتر و تاریخچه قیمت — با داده‌ی CoinGecko.",
 };
